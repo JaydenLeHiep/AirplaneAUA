@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplication1.Models.AirlineFlight>
+
+<h2>List of Flights</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Hex</th>
+            <th>Reg Number</th>
+            <th>Flag</th>
+            <th>Lat</th>
+            <th>Lng</th>
+            <th>Alt</th>
+            <th>Dir</th>
+            <th>Speed</th>
+            <th>VSpeed</th>
+            <th>Squawk</th>
+            <th>Flight Number</th>
+            <th>Flight ICAO</th>
+            <th>Flight IATA</th>
+            <th>Departure ICAO</th>
+            <th>Departure IATA</th>
+            <th>Arrival ICAO</th>
+            <th>Arrival IATA</th>
+            <th>Airline ICAO</th>
+            <th>Airline IATA</th>
+            <th>Aircraft ICAO</th>
+            <th>Updated</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flight in Model)
+        {
+            <tr>
+                <td>@flight.Hex</td>
+                <td>@flight.RegNumber</td>
+                <td>@flight.Flag</td>
+                <td>@flight.Lat</td>
+                <td>@flight.Lng</td>
+                <td>@flight.Alt</td>
+                <td>@flight.Dir</td>
+                <td>@flight.Speed</td>
+                <td>@flight.VSpeed</td>
+                <td>@flight.Squawk</td>
+                <td>@flight.FlightNumber</td>
+                <td>@flight.FlightIcao</td>
+                <td>@flight.FlightIata</td>
+                <td>@flight.DepIcao</td>
+                <td>@flight.DepIata</td>
+                <td>@flight.ArrIcao</td>
+                <td>@flight.ArrIata</td>
+                <td>@flight.AirlineIcao</td>
+                <td>@flight.AirlineIata</td>
+                <td>@flight.AircraftIcao</td>
+                <td>@flight.Updated</td>
+                <td>@flight.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
